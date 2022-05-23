@@ -38,8 +38,8 @@ let polyline = L.polyline([], {color: '#41b611', smoothFactor:3}).addTo(map);
 let polyline2 = L.polyline([],{color: "#F7A52E", smoothFactor:3}).addTo(map);
 const coords_records = [];
 const coords_records2 = [];
-latlng = [];
-latlng2 = [];
+const latlng = [];
+const latlng2 = [];
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -65,17 +65,17 @@ async function getGPS() {
     document.getElementById("CARID").textContent = coordinates.carro;
     jaja = parseInt(String(coordinates.carro).split(':')[1].trim())
     
-  
       
-    if(parseInt(String(coordinates.carro).split(':')[1].trim())==1){
+    if(parseInt(String(coordinates.carro).split(': ')[1].trim())==1){
 
-    const latlng = [parseFloat(coordinates.lat) , parseFloat(coordinates.lon)];
-    map.setView(latlng);}
+    latlng = [parseFloat(coordinates.lat) , parseFloat(coordinates.lon)];
+    map.setView(latlng);
+  }
   
    
-    if(parseInt(String(coordinates.carro).split(':')[1].trim())==2){
+    if(parseInt(String(coordinates.carro).split(': ')[1].trim())==2){
 
-      const latlng2 = [parseFloat(coordinates.lat) , parseFloat(coordinates.lon)];
+      latlng2 = [parseFloat(coordinates.lat) , parseFloat(coordinates.lon)];
       map.setView(latlng2);}
 
     
