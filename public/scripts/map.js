@@ -47,7 +47,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 async function getGPS() {
-    response = await fetch("http://ec2-52-54-107-36.compute-1.amazonaws.com:8080/");
+    response = await fetch("http://ec2-52-54-107-36.compute-1.amazonaws.com:8080/gps");
     coordinates = await response.json();
     console.log(coordinates);
     coordinates2=coordinates;
@@ -61,7 +61,7 @@ async function getGPS() {
     document.getElementById("HoraID").textContent = coordinates.time;
     document.getElementById("RPMID").textContent = coordinates.rpm;
     document.getElementById("CARID").textContent = coordinates.carro;
-    jaja = parseInt(String(coordinates.carro).split(':')[1].trim())
+    jaja = parseInt(String(coordinates.carro).split(': ')[1].trim())
     
       
     if(parseInt(String(coordinates.carro).split(': ')[1].trim())==1){
