@@ -32,7 +32,7 @@ var markerOptions2 = {
 
 // Creating a Marker
 let marker = L.marker({ lat: 11.008, lng: -74.809 }, markerOptions).addTo(map);
-let marker2 = L.marker({ lat: 11.008, lng: -75.809 }, markerOptions2).addTo(map);
+let marker2 = L.marker({ lat: 11.008, lng: -74.800 }, markerOptions2).addTo(map);
 /* let marker = L.marker({ lat: 11.008, lng: -74.809 },{ title: "Me" },{color:"#cf0404"}).addTo(map); */
 let polyline = L.polyline([], {color: '#41b611', smoothFactor:3}).addTo(map);
 let polyline2 = L.polyline([],{color: "#F7A52E", smoothFactor:3}).addTo(map);
