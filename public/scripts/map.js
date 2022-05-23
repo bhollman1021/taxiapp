@@ -47,12 +47,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 async function getGPS() {
-    response = await fetch("http://ec2-54-208-132-231.compute-1.amazonaws.com:8080/");
+    response = await fetch("http://ec2-52-54-107-36.compute-1.amazonaws.com:8080/");
     coordinates = await response.json();
     console.log(coordinates);
     coordinates2=coordinates;
-    
-
     
     
     
